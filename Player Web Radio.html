@@ -1,0 +1,106 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web Radio Atual</title>
+<script type="text/javascript" src="https://player.srvsh.com.br/inc/ajax-player.js"></script>
+<style>
+body {
+	background: #0169b0;
+	margin: 0px auto;
+	overflow: hidden;
+}
+#player {
+	width:800px;
+	height:35px;
+	margin:0px auto;
+}
+#player-controles {
+	width:135px;
+	height:30px;
+	text-align:left;
+	float:left
+}
+#player-vu-meter {
+	width:100px;
+	height:30px;
+	text-align:left;
+	float:left
+}
+#player-musica {
+	width:350px;
+	height:35px;
+	text-align:left;
+	padding-top:5px;
+	float:left;
+	cursor:pointer
+}
+#player-links {
+	height:35px;
+	text-align:right;
+	padding-top:5px;
+	float:right
+}
+.marquee {
+    width:100%;
+    height:25px; 
+    overflow:hidden;
+    white-space:nowrap;
+    padding-top:5px;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+.texto_padrao {
+	color: #FFFFFF;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+}
+</style>
+</head>
+
+<body>
+<div id="player">
+
+
+<div id="player-controles">
+<audio id="player_html5" autoplay src="https://stream-152.zeno.fm/hnms0juwwctvv?zs=MUJoRSM_RA2T55SVxX3-XA">Seu navegador nÃ£o tem suporte a HTML5</audio><img src="https://player.srvsh.com.br/img/icones/img-icone-player-html5-play.png" width="30" height="30" align="absmiddle" onclick="document.getElementById('player_html5').play();" style="cursor:pointer" />&nbsp;<img src="https://player.srvsh.com.br/img/icones/img-icone-player-html5-pause.png" width="20" height="20" align="absmiddle" onclick="document.getElementById('player_html5').pause();" style="cursor:pointer" />&nbsp;<img src="https://player.srvsh.com.br/img/icones/img-icone-player-html5-mais.png" width="15" height="35" align="top" onclick="document.getElementById('player_html5').volume += 0.1;" style="cursor:pointer" />&nbsp;<img src="https://player.srvsh.com.br/img/icones/img-icone-player-html5-menos.png" width="15" height="35" align="top" onclick="document.getElementById('player_html5').volume -= 0.1;" style="cursor:pointer" />
+<script type="text/javascript">
+// Volume Inicial player HTML5
+document.getElementById("player_html5").volume=1.0;
+</script>
+</div>
+<div id="player-vu-meter"><img src="https://player.srvsh.com.br/img/img-player-vu-meter.gif" width="100" height="25" /></div>
+
+
+
+<div id="player-musica" class="texto_padrao" onclick="abrir_popup_letra();">
+<div class="marquee"><span id="musica_atual"></span></div>
+</div>
+
+<div id="player-links"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new;"><img src="https://thumbs2.imgbox.com/a3/aa/V2iyjYgw_t.jpg" width="16" height="16" border="0" align="absmiddle" /></a>
+&nbsp;<a href="https://www.facebook.com/radioatualgospel" javascript:abrir_janela('https://www.facebook.com/radioatualgospel);"><img src="https://thumbs2.imgbox.com/0b/6c/HuuXBxcV_t.jpg" width="16" height="16" border="0" align="absmiddle" /></a>
+&nbsp;<a href="https://www.instagram.com/wradioatual/?next=%2F" javascript:abrir_janela('https://www.instagram.com/wradioatual/?next=%2F);"><img src="https://thumbs2.imgbox.com/e7/cd/CzD9EqSu_t.jpg" width="16" height="16" border="0" align="absmiddle" /></a>
+
+</div>
+
+</div>
+<script type="text/javascript">
+function abrir_popup_letra() {
+window.open( "https://player.srvsh.com.br/player-letra-musica/13708", "","width=650,height=500,toolbar=no,location=no,directories=no,status=yes,menubar=no,scrollbars=no,resizable=NO" );
+}
+
+document.getElementById('musica_atual').innerHTML = "Web Radio Atual - Todo Dia O Dia Todo, Te Aproximando De Deus...";
+</script>
+</body>
+</html>
